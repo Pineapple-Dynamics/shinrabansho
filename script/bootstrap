@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+echo "==> create database"
+
+psql postgres -c "CREATE DATABASE shinrabansho"
+
