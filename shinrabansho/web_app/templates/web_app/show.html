@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}ブログ内容{% endblock title %}
+
+{% block content %}
+	<a href="{% url 'web_app:edit' %}">投稿画面</a>
+	{% for web_app in web_apps %}
+        <h3>日付</h3>
+        {{ web_app.date }}
+        <h3>タイトル</h3>
+        {{ web_app.title }}
+        <h4>本文</h4>
+        {{ web_app.text }}
+    {% endfor %}
+{% endblock content %}
